@@ -25,7 +25,7 @@ const messageHandler = async function _messageHandler (message) {
     console.log(`${new Date().toUTCString()} ${m}`);
   }
 
-  if (message.body) {
+  if (message.body && message.body.hasOwnProperty('test') && message.body.hasOwnProperty('xml')) {
     await processNotification.process(message.body.test, message.body.xml);
     message.complete();
   } else {

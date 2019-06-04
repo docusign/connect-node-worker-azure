@@ -7,7 +7,7 @@ exports.config = {
     basicAuthName: env.BASIC_AUTH_NAME || '{BASIC_AUTH_NAME}' // The required Basic Auth Name (From Connect)
   , basicAuthPW: env.BASIC_AUTH_PW || '{BASIC_AUTH_PW}' // The required Basic Auth Password (From Connect)
   , svcBusConnectionString: env.SVC_BUS_CONNECTION_STRING  || '{SVC_BUS_CONNECTION_STRING}'
-  , queueName: 'dsconnect'
+  , queueName: env.SVC_BUS_QUEUE_NAME  || '{SVC_BUS_QUEUE_NAME}'
   , outputDir: "output" // relative to this app's root dir
   , outputFilePefix: "order_"
   , envelopeCustomField: "Sales order" // The value of this field is used in the output file name
